@@ -1,0 +1,3 @@
+[submodule "assignments/resume"]
+	path = assignments/resume
+	url = https://github.com/allnats/resume.git
