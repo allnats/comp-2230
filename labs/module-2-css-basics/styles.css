@@ -1,8 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --bg: #fbf1c7;
   --fg: #3c3836;
+  --gray: #7c6f64;
   --yellow1: #b3720d;
-  --yellow2: ##d79921;
+  --yellow2: #d79921;
   --font-main: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
 }
 
@@ -10,4 +17,9 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   font-family: var(--font-main);
+}
+
+footer p {
+  color: var(--gray);
+  text-align: center;
 }
