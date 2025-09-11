@@ -17,6 +17,21 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   font-family: var(--font-main);
+
+  /* Body width */
+  width: 60%;
+  margin: 1rem auto 0;
+}
+
+/* Flexbox navigation */
+
+header nav > ul {
+  display: flex;
+  gap: 2rem;
+}
+
+header li {
+  list-style-type: none;
 }
 
 /* Experimenting with the position property */
