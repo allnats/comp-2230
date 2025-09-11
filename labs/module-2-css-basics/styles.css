@@ -19,6 +19,23 @@ body {
   font-family: var(--font-main);
 }
 
+/* Experimenting with the position property */
+
+.intro > h2 {
+  position: relative;
+}
+
+.intro > h2::after {
+  position: absolute;
+  top: -10px;
+  padding: 5px;
+
+  content: "Look at this cool absolute position!";
+  font-size: 0.625rem;
+  color: var(--bg);
+  background-color: var(--yellow2);
+}
+
 /* Footer */
 
 footer {
@@ -29,4 +46,22 @@ footer {
 footer p {
   color: var(--gray);
   text-align: center;
+}
+
+/* Playing with the display properties */
+
+.display-block {
+  display: block;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.display-none {
+  display: none;
 }
