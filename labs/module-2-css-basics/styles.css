@@ -122,6 +122,30 @@ main {
   grid-row: 2 / 4;
 }
 
+@media (max-width: 700px) {
+  body {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 0.5rem;
+  }
+
+  .grid-item {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+
 /* Footer */
 
 footer {
