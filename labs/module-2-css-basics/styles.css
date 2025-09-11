@@ -19,6 +19,13 @@ body {
   font-family: var(--font-main);
 }
 
+/* Footer */
+
+footer {
+  margin-top: 2rem;
+  padding: 25px;
+}
+
 footer p {
   color: var(--gray);
   text-align: center;
