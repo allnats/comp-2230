@@ -11,6 +11,9 @@
   --gray2: #928374;
   --yellow1: #b3720d;
   --yellow2: #d79921;
+  --link: #83a598;
+  --link-hover: #458688;
+  --link-visited: #8ec07c;
   --font-main: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
 }
 
@@ -74,10 +77,32 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 20%;
   column-gap: 10px;
+  align-items: start;
 }
 
 .intro {
   grid-column: 1 / -1;
+}
+
+.sidebar {
+  /* Make it sticky? */
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+
+  background-color: #ebdbb2;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+.sidebar::after {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  content: "Look! This one's sticky";
+  color: var(--bg);
+  background-color: var(--yellow2);
 }
 
 .grid-section {
@@ -122,7 +147,7 @@ main {
   grid-row: 2 / 4;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   body {
     width: 100%;
     padding: 1rem;
@@ -183,4 +208,20 @@ h4,
 h5,
 h6 {
   margin: 1rem 0 0.3rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline dotted;
+}
+
+main p::first-letter {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 5px;
 }
