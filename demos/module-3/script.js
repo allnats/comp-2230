@@ -29,3 +29,21 @@ console.log(personalizeGreeting);
 
 personalizeGreeting = `Hello, ${userName}`;
 console.log(personalizeGreeting);
+
+// Conditional statements
+if (true) {
+  console.log("Do this.");
+}
+
+let userAge = 17;
+if (userAge >= 18) {
+  console.log("You are eligible to vote.");
+}
+
+if (userAge < 18) {
+  console.log("You are not eligible to vote.");
+} else if (userAge >= 18 && userAge < 65) {
+  console.log("You are eligible and required to vote.");
+} else {
+  console.log("You are eligible but not required to vote.");
+}
