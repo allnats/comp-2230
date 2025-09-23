@@ -67,3 +67,20 @@ for (let i = 0; i < colourOptions.length; i++) {
 }
 
 colourOptions.forEach((colour) => console.log(colour));
+
+// Functions
+function generateGreeting(name) {
+    return `Greetings, ${name}`;
+}
+
+console.log(generateGreeting("Allendale"));
+
+// Arrow functions
+const addScores = (score1, score2) => score1 + score2;
+console.log(addScores(3, 5));
+
+const calculateAge = (birthYear) => {
+    return new Date().getFullYear() - birthYear;
+};
+
+console.log(calculateAge(1990));
