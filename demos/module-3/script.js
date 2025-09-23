@@ -13,3 +13,19 @@ let welcomeMessage = "Hello, who might you be?"; // Mutable string
 var legacyVariable = "I am from olden times"; // Deprecated
 
 // Data Types
+let userGreeting = "Welcome to our page";
+let userScore = 100;
+let sessionActive = true;
+let userProfile = {
+  name: "Guest",
+  score: userScore,
+};
+let colourOptions = ["Red", "Blue", "Green"];
+
+// String manipulation
+let userName = "Guest";
+let personalizeGreeting = "Hello, " + userName;
+console.log(personalizeGreeting);
+
+personalizeGreeting = `Hello, ${userName}`;
+console.log(personalizeGreeting);
