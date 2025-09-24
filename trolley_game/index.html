@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving the Trolley</title>
+
+    <style>
+      .trolley img {
+        display: block;
+        width: 30vw;
+        height: auto;
+        animation-name: moveTrolley;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes moveTrolley {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(100dvw, 30dvh);
+        } /* then move up */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="trolley">
+      <img src="trolley.svg" alt="A drawn trolley" />
+    </div>
+  </body>
+</html>
