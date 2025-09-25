@@ -12,6 +12,13 @@ var planetType = "Dwarf planet";
 const coolPlutoFact =
     "Pluto has a giant, heart-shaped glacier on its surface, a region of frozen nitrogen called Tombaugh Regio";
 
+const coolPlutoFacts = [
+    "Pluto has mountains made of water ice that can rival the height of the Rocky Mountains on Earth.",
+    'Pluto and its largest moon, Charon, are often called a "binary pair" as they orbit a point in space between them.',
+    "A single year on Pluto takes about 248 Earth years to complete.",
+    " It was named in 1930 by an 11-year-old girl after the Roman god of the underworld.",
+];
+
 /*
     Calculate Pluto weight equivalent from Earth weight
     Pluto's gravity is about 0.063 times Earth's gravity
@@ -35,6 +42,19 @@ function addCelestialInfo() {
     celestialInfoSection.appendChild(pElement);
 }
 
+// Adds Pluto facts from an Array.
+function addMoreCelestialInfo() {
+    const celestialInfoSection = document.getElementById("celestial-info");
+    const ulElement = document.createElement("ul");
+    for (const fact of coolPlutoFacts) {
+        const liElement = document.createElement("li");
+        liElement.textContent = fact;
+        ulElement.appendChild(liElement);
+    }
+
+    celestialInfoSection.appendChild(ulElement);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     populateHeader();
 
@@ -47,20 +67,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     addCelestialInfo();
+    addMoreCelestialInfo();
 
     console.log(calculatePlutoWeight(32));
-
-    try {
-        invalidFunction("This should throw an err");
-    } catch (e) {
-        console.log(`I caught an error: ${e.name} ${e.message}`);
-    }
-
-    try {
-        console.log(
-            `I'm trying to print a non-defined variable: ${thisDoesNotExist}`
-        );
-    } catch (e) {
-        console.log(`I caught an error: ${e.name} ${e.message}`);
-    }
 });
+
+// Playing with the try-catch-finally blocks.
+try {
+    invalidFunction("This should throw an err");
+} catch (e) {
+    console.log(`I caught an error: ${e.name} ${e.message}`);
+} finally {
+    console.log(
+        "My cleanup code should go here. But there's nothing to clean up."
+    );
+}
+
+try {
+    console.log(
+        `I'm trying to print a non-defined variable: ${thisDoesNotExist}`
+    );
+} catch (e) {
+    console.log(`I caught an error: ${e.name} ${e.message}`);
+}
