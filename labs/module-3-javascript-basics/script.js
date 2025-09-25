@@ -49,4 +49,18 @@ document.addEventListener("DOMContentLoaded", () => {
     addCelestialInfo();
 
     console.log(calculatePlutoWeight(32));
+
+    try {
+        invalidFunction("This should throw an err");
+    } catch (e) {
+        console.log(`I caught an error: ${e.name} ${e.message}`);
+    }
+
+    try {
+        console.log(
+            `I'm trying to print a non-defined variable: ${thisDoesNotExist}`
+        );
+    } catch (e) {
+        console.log(`I caught an error: ${e.name} ${e.message}`);
+    }
 });
