@@ -17,6 +17,16 @@ function populateHeader() {
     header.textContent = planetName;
 }
 
+function addCelestialInfo() {
+    const planetDesc =
+        "Pluto is the largest known dwarf planet located in the distant Kuiper Belt, a ring of icy bodies beyond Neptune. Discovered in 1930 by Clyde Tombaugh, it is a surprisingly complex world of ice and rock with vast plains of frozen nitrogen (including the famous heart-shaped Tombaugh Regio), water-ice mountains, and a large moon, Charon, with which it forms a unique binary system. Its reclassification from a planet to a dwarf planet in 2006 sparked a global debate, and it was famously explored up close by NASA's New Horizons spacecraft in 2015.";
+
+    const celestialInfoSection = document.getElementById("celestial-info");
+    const pElement = document.createElement("p");
+    pElement.textContent = planetDesc;
+    celestialInfoSection.appendChild(pElement);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     populateHeader();
 
@@ -27,4 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceFact.textContent = coolPlutoFact;
         spaceFact.style.display = "block";
     });
+
+    addCelestialInfo();
 });
