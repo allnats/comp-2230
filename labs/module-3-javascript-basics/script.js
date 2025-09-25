@@ -12,6 +12,14 @@ var planetType = "Dwarf planet";
 const coolPlutoFact =
     "Pluto has a giant, heart-shaped glacier on its surface, a region of frozen nitrogen called Tombaugh Regio";
 
+/*
+    Calculate Pluto weight equivalent from Earth weight
+    Pluto's gravity is about 0.063 times Earth's gravity
+*/
+const calculatePlutoWeight = (earthWeight) => {
+    return `${earthWeight}kg in Earth is ${earthWeight * 0.063}kg in Pluto`;
+};
+
 function populateHeader() {
     const header = document.getElementById("celestial-name");
     header.textContent = planetName;
@@ -39,4 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     addCelestialInfo();
+
+    console.log(calculatePlutoWeight(32));
 });
