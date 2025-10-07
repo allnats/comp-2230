@@ -15,7 +15,11 @@
     <!-- This section lays out the structure for our HTML form. It's the foundation for user interaction. -->
     <!-- We're defining input fields for a username and an email. These fields are where users will input their data. -->
     <!-- We're configuring the form to make a POST request to https://httpbin.org/post. -->
-    <form id="userForm" action="https://httpbin.org/post" method="post">
+    <form
+      id="userForm"
+      action="https://httpbin.org/post"
+      method="post"
+      novalidate>
       <div class="input-container">
         <label for="username">Username:</label>
         <!-- Text input for the username. It's a simple field that takes any text. -->
