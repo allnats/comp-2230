@@ -7,7 +7,7 @@
     <title>Event Registration Form</title>
   </head>
   <body>
-    <form id="eventRegistrationForm" action="#" method="post">
+    <form id="eventRegistrationForm" action="#" novalidate>
       <h1>Event Registration</h1>
       <!-- Additional form elements will be added here -->
 
@@ -33,7 +33,8 @@
         type="email"
         name="emailAddress"
         id="emailAddress"
-        placeholder="Email address" />
+        placeholder="Email address"
+        novalidate />
 
       <!-- Phone Number -->
       <label for="phoneNumber">Phone Number</label>
@@ -41,10 +42,10 @@
         type="tel"
         name="phoneNumber"
         id="phoneNumber"
-        placeholder="(xxx)-xxx-xxx" />
+        placeholder="+xxxxxxxxxx" />
 
       <label for="ticketType">Ticket Type</label>
-      <select name="ticketType" id="ticketType" required>
+      <select name="ticketType" id="ticketType" novalidate>
         <option value="">--Please pick a ticket type--</option>
         <option value="GA">General Admission</option>
         <option value="VIP">VIP</option>
@@ -52,13 +53,7 @@
       </select>
 
       <label for="ticketNum">Ticket Number</label>
-      <input
-        type="number"
-        id="ticketNum"
-        name="ticketNum"
-        min="1"
-        max="10"
-        value="1" />
+      <input type="number" id="ticketNum" name="ticketNum" value="1" />
 
       <button type="submit">Register</button>
     </form>

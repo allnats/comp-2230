@@ -49,3 +49,8 @@ label {
   display: inline-block;
   width: 100%;
 }
+
+.error-message {
+  color: red;
+  font-style: italic;
+}
