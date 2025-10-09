@@ -43,3 +43,9 @@ button {
 button:hover {
   background-color: #005f73;
 }
+
+label {
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+}
