@@ -43,6 +43,23 @@
         id="phoneNumber"
         placeholder="(xxx)-xxx-xxx" />
 
+      <label for="ticketType">Ticket Type</label>
+      <select name="ticketType" id="ticketType" required>
+        <option value="">--Please pick a ticket type--</option>
+        <option value="GA">General Admission</option>
+        <option value="VIP">VIP</option>
+        <option value="PVIP">Premium VIP</option>
+      </select>
+
+      <label for="ticketNum">Ticket Number</label>
+      <input
+        type="number"
+        id="ticketNum"
+        name="ticketNum"
+        min="1"
+        max="10"
+        value="1" />
+
       <button type="submit">Register</button>
     </form>
     <script src="script.js" defer></script>
