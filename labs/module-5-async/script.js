@@ -1,5 +1,3 @@
-function displayCatFacts(facts) {}
-
 function simulateAsyncOperation() {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -53,8 +51,21 @@ fetchCatFacts(getFactCount())
 
 const displayBtn = document.getElementById("displayFactsBtn");
 
-displayBtn.addEventListener("click", () => {
-    fetchCatFacts(getFactCount())
-        .then((data) => console.log(data))
-        .catch((err) => console.error(err));
-});
+function clearCatFacts() {
+    const factsContainer = document.getElementById("factsContainer");
+    factsContainer.innerHTML = "";
+}
+
+async function displayCatFacts() {
+    const { data } = await fetchCatFacts(getFactCount());
+
+    clearCatFacts();
+    const factsContainer = document.getElementById("factsContainer");
+    data.forEach(({ fact }) => {
+        const p = document.createElement("p");
+        p.textContent = fact;
+        factsContainer.appendChild(p);
+    });
+}
+
+displayBtn.addEventListener("click", () => displayCatFacts());
