@@ -27,6 +27,34 @@ async function fetchCatBreeds() {
     }
 }
 
+async function fetchCatFacts(num_of_facts) {
+    try {
+        const reqUrl = `https://catfact.ninja/facts?limit=${num_of_facts}`;
+        const res = await fetch(reqUrl);
+        const data = await res.json();
+        return data;
+    } catch (err) {
+        throw new Error("Error fetching Cat Facts.");
+    }
+}
+
+function getFactCount() {
+    const select = document.getElementById("factCount");
+    return select.value;
+}
+
 fetchCatBreeds()
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
+
+fetchCatFacts(getFactCount())
+    .then((data) => console.log(data))
+    .catch((err) => console.error(err));
+
+const displayBtn = document.getElementById("displayFactsBtn");
+
+displayBtn.addEventListener("click", () => {
+    fetchCatFacts(getFactCount())
+        .then((data) => console.log(data))
+        .catch((err) => console.error(err));
+});
