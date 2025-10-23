@@ -2,12 +2,13 @@ body {
   font-family: "Arial", sans-serif;
   background-color: #f4f4f4;
   color: #333;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   height: 100vh; /* Hey what's vh? Look it up! */
+  width: 50%;
 }
 
 form {
@@ -32,14 +33,23 @@ textarea {
 }
 
 button {
+  display: block;
+  margin-inline: auto;
   padding: 0.625em 1.25em;
   background-color: #008cba;
   color: white;
   border: none;
   border-radius: 0.3125em;
   cursor: pointer;
+  /* width: %; */
 }
 
 button:hover {
   background-color: #005f73;
+}
+
+p {
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  padding: 1rem;
 }
