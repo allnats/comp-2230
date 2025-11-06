@@ -57,3 +57,25 @@
 .hide {
   display: none;
 }
+
+div:has(#clear-data-button) {
+  display: flex;
+  justify-content: center;
+}
+
+#clear-data-button {
+  background-color: #e03636;
+  color: white;
+  padding: 0.5rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+
+  font-size: 1.2rem;
+}
+
+#clear-data-button:hover {
+  outline: 1px solid rgb(128, 128, 128);
+  background-color: #b82c2c;
+}
